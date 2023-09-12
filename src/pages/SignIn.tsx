@@ -6,6 +6,9 @@ import { FormData } from "../models/signInModel";
 import { loginSchema } from "../schema/loginSchema";
 import axios from "axios";
 import jwtDecode from "jwt-decode";
+import { Link } from "react-router-dom";
+import { useIsAuthenticated } from "react-auth-kit";
+import { useSignIn } from "react-auth-kit";
 
 type ApiError = {
   email?: string;
@@ -24,6 +27,35 @@ export const SignIn: React.FC = () => {
     email: "",
     password: "",
   });
+  const isAuthenticated = useIsAuthenticated();
+  const signIn = useSignIn();
+  //   setLoading(true);
+
+  //   try {
+  //     const response = await axios.post("/login", data, {
+  //       headers: {
+  //         "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+  //       },
+  //     });
+
+  //     const decoded: any = jwtDecode(response.data.token);
+  //     // console.log(data);
+  //     // const expiresIn = decoded.exp - Math.floor(Date.now() / 1000);
+
+  //     SignIn({
+  //       token: response.data.token,
+  //       tokenType: "Bearer",
+  //       authState: {
+  //         userName: decoded.username,
+  //       },
+  //       // expiresIn: expiresIn,
+  //     });
+  //   } catch (error: any) {
+  //     setLoading(false);
+
+  //     console.log(error);
+  //   }
+  // };
 
   const handleSignIn = async (data: FormData) => {
     setLoading(true);
@@ -35,22 +67,20 @@ export const SignIn: React.FC = () => {
         },
       });
 
-      // const decoded: any = jwtDecode(response.data.access_token);
-      // console.log(data);
+      const decoded: any = jwtDecode(response.data.token);
       // const expiresIn = decoded.exp - Math.floor(Date.now() / 1000);
-      SignIn({
+      signIn({
         token: response.data.access_token,
         tokenType: response.data.token_type,
         authState: {
-          email: data.email,
+          username: decoded.username,
         },
-        // expiresIn: expiresIn,
+        expiresIn: 30,
       });
     } catch (error: any) {
       setLoading(false);
-
       if (error.response) {
-        if (error.response.status === 403) {
+        if (error.response.status == 403) {
           setApiErrors(error.response.data.detail);
         }
       } else if (error.request) {
@@ -60,6 +90,7 @@ export const SignIn: React.FC = () => {
       }
     }
   };
+
   return (
     <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -186,12 +217,12 @@ export const SignIn: React.FC = () => {
 
         <p className="mt-10 text-center text-sm text-gray-500">
           Not a member?
-          <a
-            href="#"
+          <Link
+            to="/register"
             className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
           >
             click here to sign up
-          </a>
+          </Link>
         </p>
       </div>
     </div>
