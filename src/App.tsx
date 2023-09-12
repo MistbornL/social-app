@@ -6,14 +6,9 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { SignIn } from "./pages/SignIn";
 import { ForgotPass } from "./pages/ForgotPass";
 import Layout from "./components/Layout";
-import axios from "axios";
+import NotFound from "./pages/NotFound";
 
 export const App = () => {
-  const instance = axios.create({
-    baseURL: "https://api.example.com", // Replace with your base URL
-    // You can add other default configurations here
-  });
-
   const isAuthenticated = useIsAuthenticated();
   const token = Cookies.get("auth");
   const [isLoading, setIsLoading] = useState(false);
@@ -44,7 +39,7 @@ export const App = () => {
       {isLoading ? (
         <Fragment>Loading...</Fragment>
       ) : (
-        <Route path="*" element={<Navigate to={"/"} />} />
+        <Route path="*" element={<NotFound />} />
       )}
     </Routes>
   );
