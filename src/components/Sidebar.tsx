@@ -8,10 +8,9 @@ import Cookies from "js-cookie";
 
 const Sidebar = () => {
   const [decodedToken, setDecodedToken] = useState<any | null>(null);
-  console.log(decodedToken);
-  useEffect(() => {
-    const token = Cookies.get("_auth");
+  const token = Cookies.get("_auth");
 
+  useEffect(() => {
     if (token) {
       try {
         const decoded: any = jwtDecode(token);
@@ -51,9 +50,9 @@ const Sidebar = () => {
             <div className="rounded-full w-10 h-10 flex gap-4">
               <img src="" alt="avatar" />
             </div>
-            <h1 className="text-white text-md  font-bold ">
+            {/* <h1 className="text-white text-md  font-bold ">
               {decodedToken.username}
-            </h1>
+            </h1> */}
           </div>
         </div>
       </div>

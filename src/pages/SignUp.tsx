@@ -1,9 +1,11 @@
 import { yupResolver } from "@hookform/resolvers/yup";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { registerSchema } from "../schema/registerSchema";
 import { createUser } from "../api/handleRegister";
 import { useNavigate } from "react-router-dom";
+import { handleSignIn } from "../api/handleLogin";
+import { useSignIn } from "react-auth-kit";
 
 interface FormData {
   username: string;
@@ -11,7 +13,7 @@ interface FormData {
   password: string;
   confirmPassword: string;
   terms: boolean | undefined;
-  profilePicture: FileList | null;
+  profilePicture: FileList;
 }
 
 const SignUp: React.FC = () => {
@@ -24,11 +26,20 @@ const SignUp: React.FC = () => {
   });
 
   const [loading, setLoading] = useState<boolean>(false);
+  const [complete, setComplete] = useState<boolean>(false);
+  const signIn = useSignIn();
+
   const navigate = useNavigate();
   const onSubmit = (data: FormData) => {
     setLoading(true);
-    console.log(data);
-    createUser(data, setLoading, navigate);
+
+    createUser(
+      { ...data, profilePicture: data.profilePicture[0] },
+      navigate,
+      setLoading,
+      signIn
+    );
+    console.log(complete);
   };
 
   return (
@@ -40,6 +51,7 @@ const SignUp: React.FC = () => {
               Create an account
             </h1>
             <form
+              encType="multipart/form-data"
               className="space-y-4 md:space-y-6"
               onSubmit={handleSubmit(onSubmit)}
             >
