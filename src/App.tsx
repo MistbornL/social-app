@@ -33,9 +33,7 @@ export const App = () => {
           <Route path="/recover" element={<ForgotPass />} />
         </>
       ) : (
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-        </Route>
+        <Route path="/" element={<Home />} />
       )}
 
       {isLoading ? (

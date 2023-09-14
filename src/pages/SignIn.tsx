@@ -23,11 +23,7 @@ export const SignIn: React.FC = () => {
     resolver: yupResolver(loginSchema),
   });
   const [loading, setLoading] = useState<boolean>(false);
-  const [apiErrors, setApiErrors] = useState<ApiError>({
-    email: "",
-    password: "",
-  });
-  const isAuthenticated = useIsAuthenticated();
+
   const signIn = useSignIn();
   //   setLoading(true);
 
@@ -79,15 +75,7 @@ export const SignIn: React.FC = () => {
       });
     } catch (error: any) {
       setLoading(false);
-      if (error.response) {
-        if (error.response.status == 403) {
-          setApiErrors(error.response.data.detail);
-        }
-      } else if (error.request) {
-        alert("Request failed. Please try again later.");
-      } else {
-        alert("An error occurred. Please try again later.");
-      }
+      alert(error);
     }
   };
 
