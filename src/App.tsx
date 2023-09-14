@@ -11,7 +11,7 @@ import SignUp from "./pages/SignUp";
 
 export const App = () => {
   const isAuthenticated = useIsAuthenticated();
-  const token = Cookies.get("auth");
+  const token = Cookies.get("_auth");
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {

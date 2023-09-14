@@ -10,4 +10,5 @@ export const registerSchema = Yup.object().shape({
     .oneOf([Yup.ref("password")], "Passwords must match")
     .required("Confirm password is required"),
   terms: Yup.bool().oneOf([true], "You must accept the terms and conditions"),
+  profilePicture: Yup.mixed(), // Add validation for the profile picture
 });
