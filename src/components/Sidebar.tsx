@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { navItems } from "../const";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
