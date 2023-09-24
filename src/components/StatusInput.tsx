@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import { CreateStatusModal } from "./StatusModal";
 
 export const StatusInput = () => {
+  const [open, setOpen] = useState<boolean>(false);
+
+  const openerFunction = () => {
+    setOpen(true);
+  };
   return (
     <div className="bg-secondary rounded-xl shadow-sm p-4 space-y-4 text-sm font-medium border1 dark:bg-dark2 mb-5">
+      {open && (
+        <>
+          <div
+            className="fixed inset-0 backdrop-blur-md z-10"
+            // Close the modal when clicking the backdrop
+          ></div>
+          <CreateStatusModal setOpen={setOpen} />
+        </>
+      )}
       <div className="flex items-center gap-3">
         <div
           className="flex-1 bg-[#334155] hover:bg-opacity-80 transition-all rounded-lg cursor-pointer dark:bg-dark3"
@@ -11,7 +26,7 @@ export const StatusInput = () => {
           aria-expanded="false"
         >
           <div className="py-2.5 text-center dark:text-white">
-            What do you have in mind?
+            <button onClick={openerFunction}>What do you have in mind?</button>
           </div>
         </div>
         <div
@@ -21,6 +36,7 @@ export const StatusInput = () => {
           aria-expanded="false"
         >
           <svg
+            onClick={openerFunction}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
@@ -40,6 +56,7 @@ export const StatusInput = () => {
           aria-expanded="false"
         >
           <svg
+            onClick={openerFunction}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import { useSignIn } from "react-auth-kit";
 import SimpleSlider from "../components/Carousel";

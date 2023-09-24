@@ -56,3 +56,8 @@ body {
 
 .slick-arrow {
 }
+
+.modal-open {
+  backdrop-filter: blur(8px); /* Adjust the blur intensity as needed */
+  pointer-events: none; /* Allow interaction with the modal, but not with the blurred content */
+}
