@@ -3,6 +3,7 @@ import Sidebar from "../components/Sidebar";
 import { useSignIn } from "react-auth-kit";
 import SimpleSlider from "../components/Carousel";
 import { Post } from "../components/Post";
+import { StatusInput } from "../components/StatusInput";
 
 export const Home = () => {
   return (
@@ -19,6 +20,7 @@ export const Home = () => {
           <div></div>
           {/* all posts */}
           <div className="mt-14 ">
+            <StatusInput />
             <Post />
           </div>
         </div>

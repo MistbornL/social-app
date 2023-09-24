@@ -10,7 +10,7 @@ import React from "react";
 
 export const Post = () => {
   return (
-    <div className="p-4 bg-secondary w-[483px]  rounded-lg ">
+    <div className="p-4 bg-secondary w-[510px]  rounded-lg ">
       <div className="flex justify-between">
         <div className="flex items-center gap-4">
           <div className="w-10 h-10">
