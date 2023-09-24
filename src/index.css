@@ -50,11 +50,9 @@ body {
 }
 
 .slick-list {
-  width: 900px;
-  /* center slide text vertically */
-}
+  width: 860px;
 
-.slick-arrow {
+  /* center slide text vertically */
 }
 
 .modal-open {
