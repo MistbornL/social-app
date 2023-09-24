@@ -34,7 +34,7 @@ export default function SimpleSlider() {
 
   return (
     <Fragment>
-      <Slider className="max-w-5xl h-[85px] mx-auto " {...settings}>
+      <Slider {...settings}>
         {avatars.map((avatar, index) => (
           <div
             key={index}

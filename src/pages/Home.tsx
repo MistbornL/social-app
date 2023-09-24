@@ -9,16 +9,16 @@ export const Home = () => {
     <div>
       <div className="flex">
         <Sidebar />
-        <div className="flex my-10 mx-auto max-w-6xl  flex-col">
+        <div className=" my-10 mx-auto max-w-lg  flex-col items-center">
           {/* stories */}
-          <div>
+          <div className="mb-32">
             <h1 className="text-3xl font-bold text-white mb-5">Stories</h1>
             <SimpleSlider />
           </div>
           {/* users option to post */}
           <div></div>
           {/* all posts */}
-          <div className="mt-14">
+          <div className="mt-14 ">
             <Post />
           </div>
         </div>
