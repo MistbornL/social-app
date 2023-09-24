@@ -43,5 +43,8 @@ body {
 /* the parent */
 .slick-slide {
   padding: 0px 5px;
-  max-width: 100px;
 }
+
+/* .slick-slide div {
+  width: 72px;
+} */

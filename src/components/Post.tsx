@@ -1,3 +1,10 @@
+import {
+  faBookmark,
+  faComment,
+  faHeart,
+  faPaperPlane,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 export const Post = () => {
@@ -26,12 +33,36 @@ export const Post = () => {
         </button>
       </div>
 
-      <div className="mt-6">
+      {/* post img */}
+      <div className="mt-6 relative w-full lg:h-72 h-full sm:px-4">
         <img
-          className="rounded-lg"
+          className="rounded-lg sm:rounded-lg w-full h-full  object-cover  "
           src="https://demo.foxthemes.net/instello/assets/images/avatars/avatar-lg-4.jpg"
           alt="ho yeah"
         />
+      </div>
+
+      {/* post icons */}
+      <div className="sm:p-4 p-2.5 flex items-center gap-4 text-xs font-semibold mt-2 ">
+        <div className="flex items-center gap-2.5">
+          <button type="button" className="button__ico text-red-500 ">
+            <FontAwesomeIcon icon={faHeart} size="xl" />
+          </button>
+          <span className="text-white">1380</span>
+        </div>
+        <div className="flex items-center gap-3">
+          <button type="button" className="button__ico ">
+            <FontAwesomeIcon icon={faComment} color="white" size="xl" />
+          </button>
+          <span className="text-white">260</span>
+        </div>
+        <button type="button" className="button__ico ml-auto">
+          {" "}
+          <FontAwesomeIcon icon={faPaperPlane} color={"white"} size="xl" />
+        </button>
+        <button type="button" className="button__ico">
+          <FontAwesomeIcon icon={faBookmark} color={"white"} size="xl" />
+        </button>
       </div>
     </div>
   );

@@ -12,11 +12,12 @@ export default function SimpleSlider() {
     "https://demo.foxthemes.net/instello/assets/images/avatars/avatar-2.jpg",
     "https://demo.foxthemes.net/instello/assets/images/avatars/avatar-2.jpg",
     "https://demo.foxthemes.net/instello/assets/images/avatars/avatar-2.jpg",
+    "https://demo.foxthemes.net/instello/assets/images/avatars/avatar-2.jpg",
+    "https://demo.foxthemes.net/instello/assets/images/avatars/avatar-2.jpg",
   ];
   const [length, setLength] = useState<number>(0);
-  var settings = {
+  const settings = {
     dots: false,
-    lazyLoad: true,
     speed: 500,
     slidesToShow: length,
     slidesToScroll: 1,
@@ -33,11 +34,11 @@ export default function SimpleSlider() {
 
   return (
     <Fragment>
-      <Slider className="max-w-4xl h-[85px] mx-auto " {...settings}>
+      <Slider className="max-w-5xl h-[85px] mx-auto " {...settings}>
         {avatars.map((avatar, index) => (
           <div
             key={index}
-            className=" hover:scale-110 cursor-pointer  rounded-full overflow-hidden border-solid border-[7px] border-slate-800 transition-transform transform scale-100 "
+            className="hover:scale-110 cursor-pointer  rounded-full overflow-hidden border-solid border-[7px] border-slate-800 transition-transform transform scale-100 "
           >
             <img
               className="object-cover w-full h-full"
