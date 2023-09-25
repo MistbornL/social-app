@@ -21,7 +21,7 @@ const Sidebar = () => {
     }
   }, []);
   return (
-    <div className="fixed h-screen bg-secondary flex flex-col justify-between  w-[290px]">
+    <div className="hidden fixed h-screen bg-secondary md:flex flex-col justify-between  w-[290px]">
       <div>
         <h1 className="text-white text-3xl ml-5  mt-6 mb-5">Misty</h1>{" "}
         <nav className="flex flex-col ">

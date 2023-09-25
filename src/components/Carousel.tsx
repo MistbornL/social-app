@@ -20,6 +20,7 @@ export default function SimpleSlider() {
     dots: false,
     speed: 500,
     slidesToShow: length,
+
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: "0px",
@@ -28,10 +29,27 @@ export default function SimpleSlider() {
   };
 
   useEffect(() => {
-    setLength(avatars.length <= 10 ? avatars.length : 10);
-    console.log(length);
-  }, [length]);
+    const updateLength = () => {
+      // Determine the number of avatars to display based on screen size
+      if (window.innerWidth < 768) {
+        setLength(4); // Display 5 avatars on mobile screens
+      } else {
+        // Display up to 10 avatars on larger screens or the available avatars count, whichever is smaller
+        setLength(Math.min(avatars.length, 10));
+      }
+    };
 
+    // Initial update
+    updateLength();
+
+    // Update on window resize
+    window.addEventListener("resize", updateLength);
+
+    return () => {
+      // Cleanup the resize event listener
+      window.removeEventListener("resize", updateLength);
+    };
+  }, [avatars]);
   return (
     <Fragment>
       <Slider {...settings}>

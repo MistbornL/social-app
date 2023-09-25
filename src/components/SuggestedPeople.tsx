@@ -16,7 +16,7 @@ interface SuggestedPeopleProps {
 
 export const SuggestedPeople: React.FC<SuggestedPeopleProps> = ({ people }) => {
   return (
-    <div className="bg-secondary rounded-xl shadow-sm p-5 px-6 border1 dark:bg-dark2 w-[370px]">
+    <div className="mt-4 md:mt-0 bg-secondary rounded-xl shadow-sm p-5 px-6 border1 dark:bg-dark2 ">
       <div className="flex justify-between text-black dark:text-white">
         <h3 className="font-bold text-base">People You Might Know</h3>
         <button type="button">

@@ -13,9 +13,9 @@ export const Post = () => {
     <div className="p-4 bg-secondary w-full  rounded-lg ">
       <div className="flex justify-between">
         <div className="flex items-center gap-4">
-          <div className="w-10 h-10">
+          <div className="">
             <img
-              className="object-cover w-10 h-10 rounded-full"
+              className="object-cover w-10 h-10  rounded-full"
               src="https://demo.foxthemes.net/instello/assets/images/avatars/avatar-3.jpg"
               alt="avatar"
             />
@@ -35,7 +35,7 @@ export const Post = () => {
       </div>
 
       {/* post img */}
-      <div className="mt-6 relative w-full lg:h-72 h-full sm:px-4">
+      <div className="mt-6 relative w-full   lg:h-72 h-full sm:px-4">
         <img
           className="rounded-lg sm:rounded-lg w-full h-full  object-cover  "
           src="https://demo.foxthemes.net/instello/assets/images/avatars/avatar-lg-4.jpg"

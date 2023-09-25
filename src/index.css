@@ -51,8 +51,35 @@ body {
 
 .slick-list {
   width: 860px;
+}
 
-  /* center slide text vertically */
+/* Responsive styles for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  .slick-slide {
+    width: 60px; /* Adjust the width for smaller screens */
+  }
+
+  .slick-list {
+    width: 600px; /* Adjust the width for smaller screens */
+  }
+}
+
+/* Responsive styles for screens smaller than 576px */
+@media screen and (max-width: 576px) {
+  .slick-slide {
+    width: 40px; /* Further adjust the width for even smaller screens */
+  }
+
+  .slick-list {
+    width: 350px;
+    /* Further adjust the width for even smaller screens */
+  }
+  .slick-next {
+    right: 15px;
+  }
+  .slick-prev {
+    left: -10px;
+  }
 }
 
 .modal-open {

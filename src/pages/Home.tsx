@@ -76,8 +76,11 @@ export const Home = () => {
   return (
     <div>
       <div className="flex">
-        <Sidebar />
-        <div className="mt-10 mx-auto  my-auto max-w-[935px]  flex-col items-center">
+        <div className="w-72">
+          <Sidebar />
+        </div>
+
+        <div className="mt-10 mx-auto  my-auto max-w-6xl  flex-col items-center p-2">
           {/* stories */}
           <div className="mb-14">
             <h1 className="text-3xl font-bold text-white mb-5">Stories</h1>
@@ -86,15 +89,15 @@ export const Home = () => {
           {/* users option to post */}
           <div></div>
           {/* all posts */}
-          <div className="mt-14 flex justify-between">
-            <div className="flex flex-col w-[460px]">
+          <div className="mt-14 flex md:flex-row flex-col justify-between">
+            <div className="flex flex-col w-[360px]  md:w-[460px]">
               <StatusInput />
               <div className="flex gap-6 flex-col">
                 <Post />
                 <Post />
               </div>
             </div>
-            <div>
+            <div className=" ">
               <SuggestedPeople people={suggestedUsers} />
               <Premium />
               <OnlineFriends friendData={friendsList} />
