@@ -6,6 +6,8 @@ import { Post } from "../components/Post";
 import { StatusInput } from "../components/StatusInput";
 import { SuggestedPeople, UserData } from "../components/SuggestedPeople";
 import { Premium } from "../components/Premium";
+import OnlineFriends from "../components/Online";
+import Trends from "../components/Trends";
 
 export const Home = () => {
   const suggestedUsers: UserData[] = [
@@ -29,6 +31,47 @@ export const Home = () => {
       description: "Suggested For You",
     },
     // Add more user data objects here
+  ];
+
+  const friendsList = [
+    {
+      id: 0,
+      imageUrl:
+        "https://demo.foxthemes.net/instello/assets/images/avatars/avatar-2.jpg",
+    },
+    {
+      id: 1,
+      imageUrl:
+        "https://demo.foxthemes.net/instello/assets/images/avatars/avatar-2.jpg",
+    },
+    {
+      id: 2,
+      imageUrl:
+        "https://demo.foxthemes.net/instello/assets/images/avatars/avatar-2.jpg",
+    },
+    {
+      id: 3,
+      imageUrl:
+        "https://demo.foxthemes.net/instello/assets/images/avatars/avatar-2.jpg",
+    },
+    {
+      id: 4,
+      imageUrl:
+        "https://demo.foxthemes.net/instello/assets/images/avatars/avatar-2.jpg",
+    },
+    {
+      id: 5,
+      imageUrl:
+        "https://demo.foxthemes.net/instello/assets/images/avatars/avatar-2.jpg",
+    },
+  ];
+
+  const trendsData = [
+    { title: "Artificial Intelligence", posts: "1,245,62 Post" },
+    { title: "Artificial Intelligence", posts: "1,245,62 Post" },
+    { title: "Artificial Intelligence", posts: "1,245,62 Post" },
+    { title: "Artificial Intelligence", posts: "1,245,62 Post" },
+    { title: "Artificial Intelligence", posts: "1,245,62 Post" },
   ];
   return (
     <div>
@@ -54,6 +97,8 @@ export const Home = () => {
             <div>
               <SuggestedPeople people={suggestedUsers} />
               <Premium />
+              <OnlineFriends friendData={friendsList} />
+              <Trends trendsData={trendsData} />
             </div>
           </div>
         </div>

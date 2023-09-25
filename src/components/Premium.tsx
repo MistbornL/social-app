@@ -4,7 +4,7 @@ import React from "react";
 
 export const Premium = () => {
   return (
-    <div className="mt-6 p-4 bg-secondary">
+    <div className="mt-4 p-4 bg-secondary rounded-xl">
       <div className="flex justify-between">
         <h2 className="text-white font-bold text-lg">Premium Photos</h2>
         <FontAwesomeIcon icon={faRefresh} color="white" />
