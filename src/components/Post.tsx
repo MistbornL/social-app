@@ -83,7 +83,9 @@ export const Post = () => {
             >
               Steeve
             </a>
-            <p className="mt-0.5">What a beautiful photo! I love it. 😍</p>
+            <p className="text-white mt-0.5">
+              What a beautiful photo! I love it. 😍
+            </p>
           </div>
         </div>
         <div className="flex items-start gap-3 relative">
@@ -101,7 +103,7 @@ export const Post = () => {
             >
               Monroe
             </a>
-            <p className="mt-0.5">You captured the moment. 😎</p>
+            <p className="mt-0.5 text-white">You captured the moment. 😎</p>
           </div>
         </div>
 
