@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import { useSignIn } from "react-auth-kit";
 import SimpleSlider from "../components/Carousel";
-import { Post } from "../components/Post";
-import { StatusInput } from "../components/StatusInput";
-import { SuggestedPeople, UserData } from "../components/SuggestedPeople";
-import { Premium } from "../components/Premium";
-import OnlineFriends from "../components/Online";
-import Trends from "../components/Trends";
+import { Post } from "../components/home/Post";
+import { StatusInput } from "../components/home/StatusInput";
+import { SuggestedPeople, UserData } from "../components/home/SuggestedPeople";
+import { Premium } from "../components/home/Premium";
+import OnlineFriends from "../components/home/Online";
+import Trends from "../components/home/Trends";
 
 export const Home = () => {
   const suggestedUsers: UserData[] = [
@@ -76,10 +76,6 @@ export const Home = () => {
   return (
     <div>
       <div className="flex">
-        <div className="w-72">
-          <Sidebar />
-        </div>
-
         <div className="mt-10 mx-auto  my-auto max-w-6xl  flex-col items-center p-2">
           {/* stories */}
           <div className="mb-14">

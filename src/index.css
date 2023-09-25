@@ -66,8 +66,8 @@ body {
 
 /* Responsive styles for screens smaller than 576px */
 @media screen and (max-width: 576px) {
-  .slick-slide {
-    width: 40px; /* Further adjust the width for even smaller screens */
+  .slick-slide div {
+    width: 60px; /* Further adjust the width for even smaller screens */
   }
 
   .slick-list {

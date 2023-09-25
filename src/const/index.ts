@@ -14,7 +14,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const navItems = [
-  { icon: faHome, text: "Home", accessor: "/home" },
+  { icon: faHome, text: "Home", accessor: "/" },
   { icon: faSearch, text: "Search", accessor: "/search" },
   { icon: faCompass, text: "Explore", accessor: "/explore" },
   { icon: faEnvelope, text: "Messages", accessor: "/messages" },

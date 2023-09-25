@@ -7,6 +7,8 @@ import { SignIn } from "./pages/SignIn";
 import { ForgotPass } from "./pages/ForgotPass";
 import NotFound from "./pages/NotFound";
 import SignUp from "./pages/SignUp";
+import { Profile } from "./pages/Profile";
+import { Layout } from "./components/Layout";
 
 export const App = () => {
   const isAuthenticated = useIsAuthenticated();
@@ -32,7 +34,12 @@ export const App = () => {
           <Route path="/recover" element={<ForgotPass />} />
         </>
       ) : (
-        <Route path="/" element={<Home />} />
+        <>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/profile" element={<Profile />} />
+          </Route>
+        </>
       )}
 
       {isLoading ? (

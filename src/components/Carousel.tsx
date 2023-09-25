@@ -32,7 +32,7 @@ export default function SimpleSlider() {
     const updateLength = () => {
       // Determine the number of avatars to display based on screen size
       if (window.innerWidth < 768) {
-        setLength(4); // Display 5 avatars on mobile screens
+        setLength(5); // Display 5 avatars on mobile screens
       } else {
         // Display up to 10 avatars on larger screens or the available avatars count, whichever is smaller
         setLength(Math.min(avatars.length, 10));
