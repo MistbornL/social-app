@@ -1,29 +1,31 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCamera,
-  faClockRotateLeft,
-  faEllipsisH,
-  faFlag,
-  faHandshakeSlash,
-  faPlay,
-  faShare,
-  faTag,
-  faTags,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCamera, faPlay, faTags } from "@fortawesome/free-solid-svg-icons";
 import { ProfileHeader } from "../components/profile/ProfileHeader";
+import { PostsTab } from "../components/profile/PostsTab";
+import { ReelsTab } from "../components/profile/ReelsTab";
+import { TaggedTab } from "../components/profile/TaggedTab";
 
 export const Profile = () => {
+  const [activeTab, setActiveTab] = useState("Posts");
+
+  const handleTabClick = (tabName: string) => {
+    setActiveTab(tabName);
+  };
+
   return (
     <div className="">
       <ProfileHeader />
 
       <ul className="mt-10 w-full flex gap-2 justify-center border-t dark:border-slate-700">
-        <li className="uk-active">
+        <li className={activeTab === "Posts" ? "uk-active" : ""}>
           <a
             href="#"
-            className="flex items-center p-4 py-2.5 -mb-px border-t-2 border-transparent aria-expanded:text-black aria-expanded:border-black aria-expanded:dark:text-white aria-expanded:dark:border-white"
-            aria-expanded="true"
+            className={`text-white flex items-center p-4 py-2.5 -mb-px border-t-2 border-transparent aria-expanded:text-black aria-expanded:border-black aria-expanded:dark:text-white aria-expanded:dark:border-white ${
+              activeTab === "Posts" ? "text-black dark:text-white" : ""
+            }`}
+            aria-expanded={activeTab === "Posts" ? "true" : "false"}
+            onClick={() => handleTabClick("Posts")}
           >
             <FontAwesomeIcon
               icon={faCamera}
@@ -35,11 +37,14 @@ export const Profile = () => {
             Posts
           </a>
         </li>
-        <li className="">
+        <li className={activeTab === "Reels" ? "uk-active" : ""}>
           <a
             href="#"
-            className="flex items-center p-4 py-2.5 -mb-px border-t-2 border-transparent aria-expanded:text-black aria-expanded:border-black aria-expanded:dark:text-white aria-expanded:dark:border-white"
-            aria-expanded="false"
+            className={`text-white flex items-center p-4 py-2.5 -mb-px border-t-2 border-transparent aria-expanded:text-black aria-expanded:border-black aria-expanded:dark:text-white aria-expanded:dark:border-white ${
+              activeTab === "Reels" ? "text-black dark:text-white" : ""
+            }`}
+            aria-expanded={activeTab === "Reels" ? "true" : "false"}
+            onClick={() => handleTabClick("Reels")}
           >
             <FontAwesomeIcon
               icon={faPlay}
@@ -49,14 +54,19 @@ export const Profile = () => {
               role="img"
               aria-label="play outline"
             />
-            <span className="text-white">Reels</span>
+            <span className={activeTab === "Reels" ? "text-white" : ""}>
+              Reels
+            </span>
           </a>
         </li>
-        <li className="">
+        <li className={activeTab === "Tagged" ? "uk-active" : ""}>
           <a
             href="#"
-            className="flex items-center p-4 py-2.5 -mb-px border-t-2 border-transparent aria-expanded:text-black aria-expanded:border-black aria-expanded:dark:text-white aria-expanded:dark:border-white"
-            aria-expanded="false"
+            className={`text-white flex items-center p-4 py-2.5 -mb-px border-t-2 border-transparent aria-expanded:text-black aria-expanded:border-black aria-expanded:dark:text-white aria-expanded:dark:border-white ${
+              activeTab === "Tagged" ? "text-black dark:text-white" : ""
+            }`}
+            aria-expanded={activeTab === "Tagged" ? "true" : "false"}
+            onClick={() => handleTabClick("Tagged")}
           >
             <FontAwesomeIcon
               color="white"
@@ -66,10 +76,17 @@ export const Profile = () => {
               role="img"
               aria-label="pricetags outline"
             />
-            <span className="text-white">Tagged</span>
+            <span className={activeTab === "Tagged" ? "text-white" : ""}>
+              Tagged
+            </span>
           </a>
         </li>
       </ul>
+
+      {/* Render tab content based on activeTab */}
+      {activeTab === "Posts" && <PostsTab />}
+      {activeTab === "Reels" && <ReelsTab />}
+      {activeTab === "Tagged" && <TaggedTab />}
     </div>
   );
 };
