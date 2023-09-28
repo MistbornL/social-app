@@ -63,10 +63,7 @@ const Taged = ({ imageSrc }) => {
         </>
       )}
       {/* heading */}
-      <div
-        onClick={() => setIsOpen(true)}
-        className="flex items-center gap-3 sm:px-4 py-3 p-2 text-sm font-normal"
-      >
+      <div className="flex items-center gap-3 sm:px-4 py-3 p-2 text-sm font-normal">
         <a href="profile.html" className="max-md:hidden">
           <img
             src="assets/images/avatars/avatar-5.jpg"
@@ -141,6 +138,7 @@ const Taged = ({ imageSrc }) => {
       <a href="#preview_modal" uk-toggle="" aria-expanded="false">
         <div className="relative w-full h-48">
           <img
+            onClick={() => setIsOpen(true)}
             src={imageSrc}
             alt=""
             className="w-full h-full object-cover inset-0"

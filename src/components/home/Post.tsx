@@ -126,8 +126,7 @@ export const Post = () => {
         <div className="flex-1 relative overflow-hidden h-10">
           <textarea
             placeholder="Add Comment...."
-            rows="1"
-            className=" w-full resize-none !bg-transparent px-4 py-2 focus:!border-transparent focus:!ring-transparent"
+            className="placeholder:text-white text-white ring-transparent w-full resize-none !bg-transparent px-4 py-2 focus:!border-transparent focus:ring-transparent"
             aria-haspopup="true"
             aria-expanded="false"
           ></textarea>
