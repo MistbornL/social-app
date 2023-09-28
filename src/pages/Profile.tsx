@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera, faPlay, faTags } from "@fortawesome/free-solid-svg-icons";
-import { ProfileHeader } from "../components/profile/ProfileHeader";
-import { PostsTab } from "../components/profile/PostsTab";
-import { ReelsTab } from "../components/profile/ReelsTab";
-import { TaggedTab } from "../components/profile/TaggedTab";
+import { ProfileHeader } from "../components/userProfile/ProfileHeader";
+import { PostsTab } from "../components/userProfile/PostsTab";
+import { ReelsTab } from "../components/userProfile/ReelsTab";
+import { TaggedTab } from "../components/userProfile/TaggedTab";
 
 export const Profile = () => {
   const [activeTab, setActiveTab] = useState("Posts");

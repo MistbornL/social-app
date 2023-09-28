@@ -6,6 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import { PostPreview } from "./ViewPostModal";
 
 export const PostsTab = () => {
   const imiges = [
@@ -31,7 +32,7 @@ export const PostsTab = () => {
         uk-scrollspy="target: > div; cls: uk-animation-scale-up; delay: 100"
       >
         {imiges.map((url, index) => {
-          return <Post imageSrc={url} />;
+          return <Post key={index} imageSrc={url} />;
         })}
 
         {/* Placeholder posts */}
@@ -45,10 +46,22 @@ export const PostsTab = () => {
 };
 
 const Post = ({ imageSrc }) => {
-  const [hover, setHover] = useState(false);
+  const [hover, setHover] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  console.log(hover);
   return (
     <a href="#preview_modal" uk-toggle="" aria-expanded="false">
+      {isOpen && (
+        <>
+          <div
+            className="fixed inset-0 backdrop-blur-md z-10 "
+            // Close the modal when clicking the backdrop
+          />
+          <PostPreview setOpen={setIsOpen} />
+        </>
+      )}
       <div
+        onClick={() => setIsOpen(true)}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
         className="lg:hover:scale-105 hover:shadow-lg hover:z-10 duration-500 delay-100"
