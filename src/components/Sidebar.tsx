@@ -4,11 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import jwtDecode from "jwt-decode";
 import Cookies from "js-cookie";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Sidebar = () => {
   const [decodedToken, setDecodedToken] = useState<any | null>(null);
   const token = Cookies.get("_auth");
-
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+  console.log(decodedToken);
   useEffect(() => {
     if (token) {
       try {
@@ -19,7 +21,7 @@ const Sidebar = () => {
         console.error("Invalid token:", error);
       }
     }
-  }, []);
+  }, [token]);
   return (
     <div className="hidden fixed h-screen bg-secondary md:flex flex-col justify-between  w-[290px]">
       <div>
@@ -43,17 +45,22 @@ const Sidebar = () => {
         </nav>
       </div>
 
-      <div className="flex px-4 py-2 justify-between">
-        <div className="">
-          <div className="flex items-center gap-4">
-            <div className="rounded-full w-10 h-10 flex gap-4">
-              <img src="" alt="avatar" />
-            </div>
-            {/* <h1 className="text-white text-md  font-bold ">
-              {decodedToken.username}
-            </h1> */}
-          </div>
+      <div className="mb-4 flex px-4 py-2 justify-between items-center">
+        <div className="flex gap-4 items-center">
+          <img
+            className="rounded-full object-cover w-8 h-8"
+            src="https://demo.foxthemes.net/instello/assets/images/avatars/avatar-7.jpg"
+            alt="avatar"
+          />
+          <h4 className="text-white font-bold">{decodedToken?.username}</h4>
         </div>
+
+        <FontAwesomeIcon
+          className="hover:-rotate-90  transition-all"
+          icon={faArrowRight}
+          color="white"
+          size="lg"
+        />
       </div>
     </div>
   );
