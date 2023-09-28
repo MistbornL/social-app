@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import { PostPreview } from "./ViewPostModal";
 
 export const TaggedTab = () => {
   const imiges = [
@@ -49,10 +50,23 @@ export const TaggedTab = () => {
 };
 
 const Taged = ({ imageSrc }) => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <div className=" bg-secondary relative lg:rounded-xl rounded-md overflow-hidden shadow  dark:bg-dark2 uk-scrollspy-inview">
+      {isOpen && (
+        <>
+          <div
+            className="fixed inset-0 backdrop-blur-md z-10 "
+            // Close the modal when clicking the backdrop
+          />
+          <PostPreview setOpen={setIsOpen} />
+        </>
+      )}
       {/* heading */}
-      <div className="flex items-center gap-3 sm:px-4 py-3 p-2 text-sm font-normal">
+      <div
+        onClick={() => setIsOpen(true)}
+        className="flex items-center gap-3 sm:px-4 py-3 p-2 text-sm font-normal"
+      >
         <a href="profile.html" className="max-md:hidden">
           <img
             src="assets/images/avatars/avatar-5.jpg"
