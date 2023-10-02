@@ -11,6 +11,8 @@ import {
   faPencilAlt,
   faPuzzlePiece,
   faUser,
+  faPerson,
+  faSignOut,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const navItems = [
@@ -24,5 +26,9 @@ export const navItems = [
   { icon: faUsers, text: "People", accessor: "/people" },
   { icon: faPencilAlt, text: "Create", accessor: "/create" },
   { icon: faPuzzlePiece, text: "Components", accessor: "/components" },
-  { icon: faUser, text: "Profile", accessor: "/profile" },
+];
+
+export const profileItems = [
+  { icon: faPerson, text: "Profile", accessor: "/profile" },
+  { icon: faSignOut, text: "Log Out", accessor: "/" },
 ];
