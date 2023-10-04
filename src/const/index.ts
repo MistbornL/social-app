@@ -32,3 +32,23 @@ export const profileItems = [
   { icon: faPerson, text: "Profile", accessor: "/profile" },
   { icon: faSignOut, text: "Log Out", accessor: "/" },
 ];
+
+export const settings = [
+  "General",
+  "Social Links",
+  "Password",
+  "Notifications",
+  "Manage",
+  "Privacy",
+  "Alerts",
+];
+
+export const notifications = [
+  "Someone send me message",
+  "Someone liked my photo",
+  "Someone shared on my photo",
+  "Someone followed me",
+  "Someone liked my posts",
+  "Someone mentioned me",
+  "Someone sent me follow requset",
+];

@@ -1,12 +1,4 @@
-import {
-  faCamera,
-  faClockRotateLeft,
-  faEllipsisH,
-  faFlag,
-  faHandshakeSlash,
-  faShare,
-  faTag,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCamera, faEllipsisH } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 

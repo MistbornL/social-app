@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { navItems, profileItems } from "../const";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import jwtDecode from "jwt-decode";
 import Cookies from "js-cookie";
 import {
@@ -16,7 +16,7 @@ const Sidebar = () => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const [open, setOpen] = useState(false);
   const signOut = useSignOut();
-
+  const navigate = useNavigate();
   useEffect(() => {
     if (token) {
       try {
@@ -115,17 +115,18 @@ const Sidebar = () => {
             </div>
 
             <div className="bg-white w-full h-[1px] mb-2" />
-            <div className="flex flex-col ">
-              <Link to="/">
-                <div className="cursor-pointer flex gap-4 p-4">
-                  <FontAwesomeIcon icon={faPerson} size="lg" color="white" />
-                  <h4 className="text-white text-sm">Profile</h4>
-                </div>
-              </Link>
+            <div className="flex flex-col px-2">
+              <div
+                onClick={() => navigate("/settings")}
+                className="hover:bg-slate-700 rounded-lg cursor-pointer flex gap-4 p-4"
+              >
+                <FontAwesomeIcon icon={faPerson} size="lg" color="white" />
+                <h4 className="text-white text-sm">Profile</h4>
+              </div>
 
               <div
                 onClick={() => signOut()}
-                className="cursor-pointer flex gap-4 p-4"
+                className="hover:bg-slate-700 cursor-pointer flex gap-4 p-4"
               >
                 <FontAwesomeIcon icon={faSignOut} size="lg" color="white" />
                 <h4 className="text-white text-sm">Log Out</h4>

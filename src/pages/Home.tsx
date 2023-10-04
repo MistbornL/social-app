@@ -76,7 +76,7 @@ export const Home = () => {
   return (
     <div>
       <div className="flex">
-        <div className="mt-10 mx-auto  my-auto max-w-6xl  flex-col items-center p-2">
+        <div className="mt-10 flex-col items-center p-2">
           {/* stories */}
           <div className="mb-14">
             <h1 className="text-3xl font-bold text-white mb-5">Stories</h1>

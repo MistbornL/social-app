@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import SignUp from "./pages/SignUp";
 import { Profile } from "./pages/Profile";
 import { Layout } from "./components/Layout";
+import { Settings } from "./pages/Settings";
 
 export const App = () => {
   const isAuthenticated = useIsAuthenticated();
@@ -38,6 +39,7 @@ export const App = () => {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/settings" element={<Settings />} />
           </Route>
         </>
       )}

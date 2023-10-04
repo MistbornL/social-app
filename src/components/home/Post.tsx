@@ -7,20 +7,22 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Post = () => {
+  const navigate = useNavigate();
   return (
-    <div className="p-4 bg-secondary w-full  rounded-lg ">
+    <div className="p-4  bg-secondary w-full  rounded-lg ">
       <div className="flex justify-between">
         <div className="flex items-center gap-4">
-          <div className="">
+          <div onClick={() => navigate("/profile")} className="cursor-pointer">
             <img
               className="object-cover w-10 h-10  rounded-full"
               src="https://demo.foxthemes.net/instello/assets/images/avatars/avatar-3.jpg"
               alt="avatar"
             />
           </div>
-          <div className="flex flex-col ">
+          <div className="flex flex-col   ">
             <h3 className="text-white font-bold">Monroe Parker</h3>
             <span className="text-gray-400 text-sm ">2 Hours Ago</span>
           </div>
@@ -35,11 +37,11 @@ export const Post = () => {
       </div>
 
       {/* post img */}
-      <div className="mt-6 relative w-full   lg:h-72 h-full sm:px-4">
+      <div className="mt-6 cursor-pointer relative w-full   lg:h-72 h-full sm:px-4">
         <img
           className="rounded-lg sm:rounded-lg w-full h-full  object-cover  "
           src="https://demo.foxthemes.net/instello/assets/images/avatars/avatar-lg-4.jpg"
-          alt="ho yeah"
+          alt="user"
         />
       </div>
 
@@ -69,20 +71,20 @@ export const Post = () => {
       {/* comment */}
       <div className="sm:p-4 p-2.5 border-t border-gray-100 font-normal space-y-3 relative dark:border-slate-700/40">
         <div className="flex items-start gap-3 relative">
-          <a href="profile.html">
+          <Link to="/profile">
             <img
               src="assets/images/avatars/avatar-2.jpg"
               alt=""
               className="w-6 h-6 mt-1 rounded-full"
             />
-          </a>
+          </Link>
           <div className="flex-1">
-            <a
-              href="profile.html"
+            <Link
+              to="/profile"
               className="text-black font-medium inline-block dark:text-white"
             >
               Steeve
-            </a>
+            </Link>
             <p className="text-white mt-0.5">
               What a beautiful photo! I love it. 😍
             </p>
