@@ -30,7 +30,7 @@ export const SettingGeneral = () => {
       className=" flex-col items-center space-y-4 md:space-y-6"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <div className="flex items-center gap-40">
+      <div className="grid grid-cols-2 items-center ">
         <label
           htmlFor="username"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -53,7 +53,7 @@ export const SettingGeneral = () => {
           <p className="mt-1 text-red-500 text-sm">{errors.username.message}</p>
         )}
       </div>
-      <div className="flex items-center gap-40">
+      <div className="grid grid-cols-2 items-center ">
         <label
           htmlFor="email"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -76,7 +76,7 @@ export const SettingGeneral = () => {
           <p className="mt-1 text-red-500 text-sm">{errors.email.message}</p>
         )}
       </div>
-      <div className="flex items-center gap-40">
+      <div className="grid grid-cols-2 items-center ">
         <label
           htmlFor="bio"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -99,7 +99,7 @@ export const SettingGeneral = () => {
         )}
       </div>
       {/* Gender Select */}
-      <div className="flex items-center gap-40">
+      <div className="grid grid-cols-2 items-center ">
         <label
           htmlFor="gender"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -127,7 +127,7 @@ export const SettingGeneral = () => {
       </div>
 
       {/* Relationship Status Select */}
-      <div className="flex items-center gap-40 ">
+      <div className="grid grid-cols-2 items-center  ">
         <label
           htmlFor="relationship"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"

@@ -119,7 +119,7 @@ export const Settings = () => {
           />
 
           <div className="flex flex-col gap-1">
-            <h1 className="text-white">Monroe Parker</h1>
+            <h1 className="text-white font-bold text-xl">Monroe Parker</h1>
             <span className="text-sm text-blue-600">@Monroe</span>
           </div>
         </div>
