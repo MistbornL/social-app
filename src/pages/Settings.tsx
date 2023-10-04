@@ -3,6 +3,7 @@ import { manageItems, notifications, settings } from "../const";
 import { SettingGeneral } from "../components/settingsPage/SettingGeneral";
 import { SettingSocial } from "../components/settingsPage/SettingsSocial";
 import { SettingsPrivacy } from "../components/settingsPage/SerringsPrivacy";
+import { SettingAlert } from "../components/settingsPage/SettingAlert";
 
 export const Settings = () => {
   const [selected, setSelected] = useState("General");
@@ -19,6 +20,8 @@ export const Settings = () => {
         return <SettingSocial />;
       case "Privacy":
         return <SettingsPrivacy />;
+      case "Alerts":
+        return <SettingAlert />;
       case "Notifications":
         return (
           <div>

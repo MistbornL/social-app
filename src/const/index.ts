@@ -13,6 +13,9 @@ import {
   faUser,
   faPerson,
   faSignOut,
+  faMailBulk,
+  faDownload,
+  faMobile,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const navItems = [
@@ -69,5 +72,34 @@ export const manageItems = [
   {
     question: "Show my activities ?",
     answers: ["Public", "Hide"],
+  },
+];
+
+export const alertItems = [
+  {
+    icon: faMailBulk,
+    color: "green",
+
+    rotate: 0,
+    header: "Email Notifications",
+    paragraph:
+      "You can receive notifications about important updates and content directly to your email inbox.",
+  },
+  {
+    icon: faDownload,
+    color: "purple",
+
+    rotate: 180,
+    header: "Web Notifications",
+    paragraph:
+      "You can receive notifications through your notifications center",
+  },
+  {
+    icon: faMobile,
+    color: "emerald",
+    rotate: 0,
+    header: "Phone Notifications",
+    paragraph:
+      "You can receive notifications on your phone, so you can stay up-to-date even when you’re on the go",
   },
 ];
