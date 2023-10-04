@@ -4,6 +4,7 @@ import { SettingGeneral } from "../components/settingsPage/SettingGeneral";
 import { SettingSocial } from "../components/settingsPage/SettingsSocial";
 import { SettingsPrivacy } from "../components/settingsPage/SerringsPrivacy";
 import { SettingAlert } from "../components/settingsPage/SettingAlert";
+import SettingPasswordRecover from "../components/settingsPage/SettingPassword";
 
 export const Settings = () => {
   const [selected, setSelected] = useState("General");
@@ -22,6 +23,8 @@ export const Settings = () => {
         return <SettingsPrivacy />;
       case "Alerts":
         return <SettingAlert />;
+      case "Password":
+        return <SettingPasswordRecover />;
       case "Notifications":
         return (
           <div>
