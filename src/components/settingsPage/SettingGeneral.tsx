@@ -127,7 +127,7 @@ export const SettingGeneral = () => {
       </div>
 
       {/* Relationship Status Select */}
-      <div className="flex items-center gap-40">
+      <div className="flex items-center gap-40 ">
         <label
           htmlFor="relationship"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -155,6 +155,12 @@ export const SettingGeneral = () => {
             {errors.relationship.message}
           </p>
         )}
+      </div>
+      <div className="justify-center flex gap-4 mt-10">
+        <button className="px-10 py-2 bg-slate-600 rounded-lg">cancel</button>
+        <button className="px-10 py-2 bg-pink-600  text-white rounded-lg">
+          Save
+        </button>
       </div>
     </form>
   );

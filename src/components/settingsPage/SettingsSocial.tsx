@@ -140,6 +140,12 @@ export const SettingSocial = () => {
           )}
         </div>
       </form>
+      <div className="justify-center flex gap-4 mt-14">
+        <button className="px-10 py-2 bg-slate-600 rounded-lg">cancel</button>
+        <button className="px-10 py-2 bg-pink-600  text-white rounded-lg">
+          Save
+        </button>
+      </div>
     </div>
   );
 };

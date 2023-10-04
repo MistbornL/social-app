@@ -52,3 +52,22 @@ export const notifications = [
   "Someone mentioned me",
   "Someone sent me follow requset",
 ];
+
+export const manageItems = [
+  {
+    question: "Who can follow me?",
+    answers: ["Everyone", "The People I Follow", "No body"],
+  },
+  {
+    question: "Who can message me ?",
+    answers: ["Everyone", "The People I Know", "No body"],
+  },
+  {
+    question: "Status",
+    answers: ["Yes", "No"],
+  },
+  {
+    question: "Show my activities ?",
+    answers: ["Public", "Hide"],
+  },
+];
