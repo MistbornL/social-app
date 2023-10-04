@@ -5,7 +5,7 @@ import { alertItems } from "../../const";
 
 export const SettingAlert = () => {
   return (
-    <div className="flex px-10 py-4 flex-col">
+    <div className="flex px-10  py-4 flex-col">
       <div className="flex flex-col gap-4">
         <h1 className="text-white text-xl">Alerts preferences</h1>
         <p className="text-gray-400 max-w-lg">
@@ -15,7 +15,7 @@ export const SettingAlert = () => {
       </div>
       {alertItems.map((item, index) => {
         return (
-          <div className="flex gap-4 items-center mt-10 justify-between ">
+          <div className="flex gap-4 items-center mt-10  justify-between ">
             <div className="flex gap-5 items-center">
               <div
                 className={`rounded-full px-3 py-2 bg-${item.color}-200 bg-emerald-100`}
@@ -40,6 +40,12 @@ export const SettingAlert = () => {
           </div>
         );
       })}
+      <div className="justify-center flex gap-4 mt-10">
+        <button className="px-10 py-2 bg-slate-600 rounded-lg">cancel</button>
+        <button className="px-10 py-2 bg-pink-600  text-white rounded-lg">
+          Save
+        </button>
+      </div>
     </div>
   );
 };
