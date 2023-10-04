@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { manageItems, notifications, settings } from "../const";
 import { SettingGeneral } from "../components/settingsPage/SettingGeneral";
 import { SettingSocial } from "../components/settingsPage/SettingsSocial";
+import { SettingsPrivacy } from "../components/settingsPage/SerringsPrivacy";
 
 export const Settings = () => {
   const [selected, setSelected] = useState("General");
@@ -16,6 +17,8 @@ export const Settings = () => {
         return <SettingGeneral />;
       case "Social Links":
         return <SettingSocial />;
+      case "Privacy":
+        return <SettingsPrivacy />;
       case "Notifications":
         return (
           <div>
@@ -117,12 +120,14 @@ export const Settings = () => {
             <span className="text-sm text-blue-600">@Monroe</span>
           </div>
         </div>
-        <div className="px-10 py-3 border-t flex gap-6 border-gray-600">
+        <div className="px-10 py-3 border-t flex gap-6 border-gray-600 ">
           {settings.map((item, index) => (
             <h3
               key={index}
-              className={`text-white cursor-pointer ${
-                selected === item ? "border-b" : ""
+              className={` cursor-pointer mr-4   ${
+                selected === item
+                  ? "border-b border-blue-700 text-blue-700"
+                  : "text-white"
               }`}
               onClick={() => handleTabClick(item)}
             >
