@@ -29,8 +29,8 @@ export const Settings = () => {
         return (
           <div>
             {" "}
-            <div className="grid grid-cols-2">
-              <div>
+            <div className="grid lg:grid-cols-2 grid-cols-1 ">
+              <div className="mb-6 lg:mb-0">
                 <h1 className="text-md text-gray-300">Notify me when</h1>
               </div>
 
@@ -72,7 +72,10 @@ export const Settings = () => {
           <div className="flex">
             <div className="flex flex-col ">
               {manageItems.map((item, index) => (
-                <div key={index} className="mb-4 grid grid-cols-2 gap-14">
+                <div
+                  key={index}
+                  className="mb-4 grid lg:grid-cols-2 grid-cols-1 lg:gap-14"
+                >
                   <h1 className="text-md text-gray-300">{item.question}</h1>
                   <div className="">
                     {item.answers.map((answer, subIndex) => (
@@ -108,7 +111,7 @@ export const Settings = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 p-2 lg:p-0">
       <div className="mt-10 flex">
         <h1 className="text-white text-3xl font-bold">Settings</h1>
       </div>

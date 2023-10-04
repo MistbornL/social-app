@@ -15,7 +15,7 @@ export const SettingsPrivacy = () => {
         encType="multipart/form-data"
         className="mt-6 space-y-4 md:space-y-6"
       >
-        <div className="flex gap-10 justify-between items-center">
+        <div className="flex-col lg:flex-row flex lg:gap-10 lg:items-center justify-between">
           <h4 className="text-white">Who can follow me?</h4>
           <select
             // {...register("social1")}
@@ -26,7 +26,7 @@ export const SettingsPrivacy = () => {
             <option value="nobody">Nobody</option>
           </select>
         </div>
-        <div className="flex gap-10 items-center justify-between">
+        <div className="flex-col lg:flex-row flex lg:gap-10 lg:items-center justify-between">
           <h4 className="text-white">Who can message me?</h4>
           <select
             // {...register("social2")}
@@ -37,7 +37,7 @@ export const SettingsPrivacy = () => {
             <option value="nobody">Nobody</option>
           </select>
         </div>
-        <div className="flex gap-10 items-center justify-between">
+        <div className="flex-col lg:flex-row flex lg:gap-10 lg:items-center justify-between">
           <h4 className="text-white">Show my activities?</h4>
           <select
             // {...register("social3")}
@@ -47,7 +47,7 @@ export const SettingsPrivacy = () => {
             <option value="hide">Hide</option>
           </select>
         </div>
-        <div className="flex gap-10 items-center justify-between">
+        <div className="flex-col lg:flex-row flex lg:gap-10 lg:items-center justify-between">
           <h4 className="text-white">Status</h4>
           <select
             // {...register("social4")}
@@ -57,7 +57,7 @@ export const SettingsPrivacy = () => {
             <option value="no">No</option>
           </select>
         </div>
-        <div className="flex gap-10 items-center justify-between">
+        <div className="flex-col lg:flex-row flex lg:gap-10 lg:items-center justify-between">
           <h4 className="text-white">Who can see my tags?</h4>
           <select
             // {...register("social5")}
@@ -67,7 +67,7 @@ export const SettingsPrivacy = () => {
             <option value="deny">Deny</option>
           </select>
         </div>
-        <div className="flex gap-10 items-center justify-between">
+        <div className="flex-col lg:flex-row flex lg:gap-10 lg:items-center justify-between">
           <h4 className="text-white">Allow search engines</h4>
           <select
             // {...register("social6")}

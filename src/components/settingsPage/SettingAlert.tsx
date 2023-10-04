@@ -5,7 +5,7 @@ import { alertItems } from "../../const";
 
 export const SettingAlert = () => {
   return (
-    <div className="flex px-10  py-4 flex-col">
+    <div className="flex lg:px-10 p-2  lg:py-4 flex-col">
       <div className="flex flex-col gap-4">
         <h1 className="text-white text-xl">Alerts preferences</h1>
         <p className="text-gray-400 max-w-lg">
@@ -18,7 +18,7 @@ export const SettingAlert = () => {
           <div className="flex gap-4 items-center mt-10  justify-between ">
             <div className="flex gap-5 items-center">
               <div
-                className={`rounded-full px-3 py-2 bg-${item.color}-200 bg-emerald-100`}
+                className={`hidden lg:blockrounded-full px-3 py-2 bg-${item.color}-200 bg-emerald-100`}
               >
                 <FontAwesomeIcon
                   icon={item.icon}
@@ -28,7 +28,9 @@ export const SettingAlert = () => {
               </div>
               <div className="flex  flex-col gap-1 justify-between">
                 <h2 className="text-white text-md font-bold">{item.header}</h2>
-                <p className="max-w-lg text-gray-400">{item.paragraph}</p>
+                <p className="lg:max-w-lg max-w-xs text-gray-400">
+                  {item.paragraph}
+                </p>
               </div>
             </div>
             <div>

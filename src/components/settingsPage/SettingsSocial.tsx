@@ -40,7 +40,7 @@ export const SettingSocial = () => {
         className="mt-14 flex-col items-center space-y-4 md:space-y-6"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <div className="flex items-center gap-10">
+        <div className="flex  items-center gap-10">
           <img
             className="rounded-full w-10 h-10"
             src="https://img.freepik.com/premium-vector/blue-social-media-logo_197792-1759.jpg"
@@ -65,7 +65,7 @@ export const SettingSocial = () => {
             </p>
           )}
         </div>
-        <div className="flex items-center gap-10">
+        <div className="flex  items-center gap-10">
           <img
             className="rounded-full w-10 h-10"
             src="https://img.freepik.com/premium-vector/modern-badge-logo-instagram-icon_578229-124.jpg"
@@ -89,7 +89,7 @@ export const SettingSocial = () => {
             </p>
           )}
         </div>
-        <div className="flex items-center gap-10">
+        <div className="flex  items-center gap-10">
           <img
             className="rounded-full w-10 h-10"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0U2DMVkMIXm0eXE9PbaYow-0leO7kyx91tkRoo7G9Dw&s"
