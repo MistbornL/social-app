@@ -129,7 +129,7 @@ export const Settings = () => {
             <span className="text-sm text-blue-600">@Monroe</span>
           </div>
         </div>
-        <div className="px-10 py-3 border-t flex gap-6 border-gray-600 ">
+        <div className="px-10 py-3 border-t flex gap-6 border-gray-600 lg:flex-row flex-col">
           {settings.map((item, index) => (
             <h3
               key={index}
@@ -145,7 +145,7 @@ export const Settings = () => {
           ))}
         </div>
       </div>
-      <div className="flex justify-center py-10 mt-4 bg-secondary rounded-lg">
+      <div className="flex justify-center py-10 mt-4 bg-secondary rounded-lg lg:px-0 px-4">
         {renderSelectedTab()}
       </div>
     </div>

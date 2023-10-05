@@ -16,6 +16,12 @@ import {
   faMailBulk,
   faDownload,
   faMobile,
+  faCamera,
+  faMessage,
+  faShield,
+  faImage,
+  faVideo,
+  faBookmark,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const navItems = [
@@ -104,4 +110,60 @@ export const alertItems = [
   },
 ];
 
-export const modalItems = [{ heading: "Monthly" }];
+export const modalItems = [
+  {
+    icon: faCamera,
+    head: "Stories",
+    color: "blue",
+    desc: "Post moments your everyday life that disappear after 24 hours",
+  },
+
+  {
+    icon: faMessage,
+    head: "Messages",
+    color: "orange",
+    desc: "Send photos, videos, and messages privately to your friends or groups",
+  },
+
+  {
+    icon: faCompass,
+    head: "Explore",
+    color: "purple",
+    desc: "Discover content and creators based on their interests",
+  },
+
+  {
+    icon: faShield,
+    head: "Privacy",
+    color: "red",
+    desc: "Make your account visible only to people who follow you",
+  },
+
+  {
+    icon: faImage,
+    head: "Images",
+    color: "cyan",
+    desc: "You can upload Unlimited photes and share with your friends",
+  },
+
+  {
+    icon: faVideo,
+    head: "Shorts",
+    color: "pink",
+    desc: "Create and share short, entertaining videos with music, filters, and effects",
+  },
+
+  {
+    icon: faBookmark,
+    head: "Bookmark",
+    color: "green",
+    desc: "Create collections of saved posts based on themes, topics, or categories.",
+  },
+
+  {
+    icon: faMessage,
+    head: "Shopping",
+    color: "blue",
+    desc: "Browse and buy products from your favorite brands and creators",
+  },
+];
