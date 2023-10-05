@@ -103,3 +103,5 @@ export const alertItems = [
       "You can receive notifications on your phone, so you can stay up-to-date even when you’re on the go",
   },
 ];
+
+export const modalItems = [{ heading: "Monthly" }];

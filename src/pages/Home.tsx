@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import { useSignIn } from "react-auth-kit";
-import SimpleSlider from "../components/Carousel";
 import { Post } from "../components/home/Post";
 import { StatusInput } from "../components/home/StatusInput";
 import { SuggestedPeople, UserData } from "../components/home/SuggestedPeople";
 import { Premium } from "../components/home/Premium";
 import OnlineFriends from "../components/home/Online";
 import Trends from "../components/home/Trends";
+import { SimpleSlider } from "../components/Carousel";
 
 export const Home = () => {
   const suggestedUsers: UserData[] = [
@@ -73,6 +73,7 @@ export const Home = () => {
     { title: "Artificial Intelligence", posts: "1,245,62 Post" },
     { title: "Artificial Intelligence", posts: "1,245,62 Post" },
   ];
+
   return (
     <div>
       <div className="flex">

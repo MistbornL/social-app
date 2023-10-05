@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import Slider from "react-slick";
 
-export default function SimpleSlider() {
+export const SimpleSlider = () => {
   const avatars = [
     "https://demo.foxthemes.net/instello/assets/images/avatars/avatar-2.jpg",
     "https://demo.foxthemes.net/instello/assets/images/avatars/avatar-2.jpg",
@@ -68,4 +68,4 @@ export default function SimpleSlider() {
       </Slider>
     </Fragment>
   );
-}
+};

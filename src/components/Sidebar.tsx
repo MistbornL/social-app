@@ -10,13 +10,18 @@ import {
   faSignOut,
 } from "@fortawesome/free-solid-svg-icons";
 import { useSignOut } from "react-auth-kit";
-const Sidebar = () => {
+
+type SideProps = {
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const Sidebar: React.FC<SideProps> = ({ setIsOpen }) => {
   const [decodedToken, setDecodedToken] = useState<any | null>(null);
   const token = Cookies.get("_auth");
   const [isHovered, setIsHovered] = useState<boolean>(false);
-  const [open, setOpen] = useState(false);
   const signOut = useSignOut();
   const navigate = useNavigate();
+
   useEffect(() => {
     if (token) {
       try {
@@ -59,12 +64,30 @@ const Sidebar = () => {
                 className="px-5 w-64 hover:bg-slate-700 transition-all duration-400 py-4 rounded-md"
                 key={index}
               >
-                <Link to={item.accessor}>
-                  <FontAwesomeIcon size="lg" icon={item.icon} color="white" />
-                  <span className="ml-4 text-text hover:text-textHover">
-                    {item.text}
-                  </span>
-                </Link>
+                {item.text === "People" ? (
+                  <div
+                    className="cursor-pointer"
+                    onClick={() => setIsOpen(true)}
+                  >
+                    <FontAwesomeIcon size="lg" icon={item.icon} color="white" />
+                    <span className="ml-4 text-text hover:text-textHover">
+                      {item.text}
+                    </span>
+                  </div>
+                ) : (
+                  <Link to={item.accessor}>
+                    <div>
+                      <FontAwesomeIcon
+                        size="lg"
+                        icon={item.icon}
+                        color="white"
+                      />
+                      <span className="ml-4 text-text hover:text-textHover">
+                        {item.text}
+                      </span>
+                    </div>
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
