@@ -8,6 +8,6 @@ export const passwordRecoverySchema = yup.object().shape({
     .min(8, "Password must be at least 8 characters long"),
   repeatPassword: yup
     .string()
-    .oneOf([yup.ref("newPassword"), null], "Passwords must match")
+    .oneOf([yup.ref("newPassword")], "Passwords must match")
     .required("Repeat password is required"),
 });

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { navItems, profileItems } from "../const";
+import { navItems } from "../const";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useNavigate } from "react-router-dom";
 import jwtDecode from "jwt-decode";

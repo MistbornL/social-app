@@ -1,6 +1,4 @@
-import { faMailBulk, faUpload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
 import { alertItems } from "../../const";
 
 export const SettingAlert = () => {
@@ -15,7 +13,10 @@ export const SettingAlert = () => {
       </div>
       {alertItems.map((item, index) => {
         return (
-          <div className="flex gap-4 items-center mt-10  justify-between ">
+          <div
+            key={index}
+            className="flex gap-4 items-center mt-10  justify-between "
+          >
             <div className="flex gap-5 items-center">
               <div
                 className={`hidden lg:blockrounded-full px-3 py-2 bg-${item.color}-200 bg-emerald-100`}

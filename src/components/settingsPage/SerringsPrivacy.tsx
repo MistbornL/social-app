@@ -1,14 +1,4 @@
-import { yupResolver } from "@hookform/resolvers/yup";
-import React from "react";
-import { useForm } from "react-hook-form";
-import { generalSchema } from "../../schema/generalSchema";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { socialSchema } from "../../schema/socialSchema";
-
 export const SettingsPrivacy = () => {
-  const onSubmit = (data: FormData) => {
-    console.log(data);
-  };
   return (
     <div>
       <form

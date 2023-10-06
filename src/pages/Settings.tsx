@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { manageItems, notifications, settings } from "../const";
 import { SettingGeneral } from "../components/settingsPage/SettingGeneral";
 import { SettingSocial } from "../components/settingsPage/SettingsSocial";

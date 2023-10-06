@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { CreateStatusModal } from "./StatusModal";
 
 export const StatusInput = () => {

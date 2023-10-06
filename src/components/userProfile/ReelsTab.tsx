@@ -1,12 +1,5 @@
-import {
-  faArrowRight,
-  faArrowRightArrowLeft,
-  faCommentDots,
-  faHeartCircleBolt,
-  faPlay,
-} from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faPlay } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
 
 export const ReelsTab = () => {
   const imiges = [
@@ -32,7 +25,7 @@ export const ReelsTab = () => {
         uk-scrollspy="target: > div; cls: uk-animation-scale-up; delay: 100"
       >
         {imiges.map((url, index) => {
-          return <Reels imageSrc={url} />;
+          return <Reels key={index} imageSrc={url} />;
         })}
 
         {/* Placeholder posts */}
@@ -45,7 +38,11 @@ export const ReelsTab = () => {
   );
 };
 
-const Reels = ({ imageSrc }) => {
+type ReelsProps = {
+  imageSrc: string;
+};
+
+const Reels: React.FC<ReelsProps> = ({ imageSrc }) => {
   return (
     <a href="#preview_modal" uk-toggle="" aria-expanded="false">
       <div className="lg:hover:scale-105 hover:shadow-lg hover:z-10 duration-500 delay-100">

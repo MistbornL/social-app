@@ -1,15 +1,12 @@
 import {
   faArrowRight,
-  faArrowRightArrowLeft,
   faBookBookmark,
   faCommentDots,
   faEllipsisH,
   faHeart,
-  faHeartCircleBolt,
-  faPlay,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import { useState } from "react";
 import { PostPreview } from "./ViewPostModal";
 
 export const TaggedTab = () => {
@@ -36,7 +33,7 @@ export const TaggedTab = () => {
         uk-scrollspy="target: > div; cls: uk-animation-scale-up; delay: 100"
       >
         {imiges.map((url, index) => {
-          return <Taged imageSrc={url} />;
+          return <Tagged key={index} imageSrc={url} />;
         })}
 
         {/* Placeholder posts */}
@@ -49,7 +46,11 @@ export const TaggedTab = () => {
   );
 };
 
-const Taged = ({ imageSrc }) => {
+type TaggedProps = {
+  imageSrc: string;
+};
+
+const Tagged: React.FC<TaggedProps> = ({ imageSrc }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <div className=" bg-secondary relative lg:rounded-xl rounded-md overflow-hidden shadow  dark:bg-dark2 uk-scrollspy-inview">

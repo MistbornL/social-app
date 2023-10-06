@@ -1,6 +1,6 @@
 import * as yup from "yup";
 
-export const generalSchema = yup.object().shape({
+export const generalSchema: any = yup.object().shape({
   username: yup
     .string()
     .min(3, "Username must be at least 3 characters")

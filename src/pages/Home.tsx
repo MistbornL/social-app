@@ -1,6 +1,3 @@
-import React, { useState } from "react";
-import Sidebar from "../components/Sidebar";
-import { useSignIn } from "react-auth-kit";
 import { Post } from "../components/home/Post";
 import { StatusInput } from "../components/home/StatusInput";
 import { SuggestedPeople, UserData } from "../components/home/SuggestedPeople";

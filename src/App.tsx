@@ -1,8 +1,8 @@
 import { useIsAuthenticated } from "react-auth-kit";
-import Cookies from "js-cookie";
+// import Cookies from "js-cookie";
 import { Fragment, useEffect, useState } from "react";
 import { Home } from "./pages/Home";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { SignIn } from "./pages/SignIn";
 import { ForgotPass } from "./pages/ForgotPass";
 import NotFound from "./pages/NotFound";
@@ -13,7 +13,7 @@ import { Settings } from "./pages/Settings";
 
 export const App = () => {
   const isAuthenticated = useIsAuthenticated();
-  const token = Cookies.get("_auth");
+  // const token = Cookies.get("_auth");
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {

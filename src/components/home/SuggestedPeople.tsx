@@ -1,7 +1,7 @@
 import { faRefresh } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // Define a TypeScript interface for the user data
 export interface UserData {
@@ -16,7 +16,6 @@ interface SuggestedPeopleProps {
 }
 
 export const SuggestedPeople: React.FC<SuggestedPeopleProps> = ({ people }) => {
-  const navigate = useNavigate();
   return (
     <div className="mt-4 md:mt-0 bg-secondary rounded-xl shadow-sm p-5 px-6 border1 dark:bg-dark2 ">
       <div className="flex justify-between text-black dark:text-white">

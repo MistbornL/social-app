@@ -1,14 +1,7 @@
 import { faCheck, faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { CheckIcon } from "@heroicons/react/20/solid";
 import { modalItems } from "../const";
 
-const includedFeatures = [
-  "Private forum access",
-  "Member resources",
-  "Entry to annual conference",
-  "Official member t-shirt",
-];
 type PricingProps = {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
@@ -77,7 +70,7 @@ export const Pricing: React.FC<PricingProps> = ({ setIsOpen }) => {
               const bgColorClass = `bg-${item.color}-300`;
               console.log(bgColorClass);
               return (
-                <div className="flex items-center gap-4">
+                <div key={index} className="flex items-center gap-4">
                   <div
                     className={`rounded-full ${bgColorClass} px-3 py-3 items-center flex justify-center`}
                   >

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera, faPlay, faTags } from "@fortawesome/free-solid-svg-icons";
 import { ProfileHeader } from "../components/userProfile/ProfileHeader";

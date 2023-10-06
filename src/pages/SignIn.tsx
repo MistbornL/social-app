@@ -7,13 +7,8 @@ import { loginSchema } from "../schema/loginSchema";
 import axios from "axios";
 import jwtDecode from "jwt-decode";
 import { Link } from "react-router-dom";
-import { useIsAuthenticated } from "react-auth-kit";
 import { useSignIn } from "react-auth-kit";
 
-type ApiError = {
-  email?: string;
-  password?: string;
-};
 export const SignIn: React.FC = () => {
   const {
     register,
@@ -89,7 +84,7 @@ export const SignIn: React.FC = () => {
           src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
           alt="Your Company"
         />
-        <h2 className="text-white mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+        <h2 className="text-white mt-10 text-center text-2xl font-bold leading-9 tracking-tight ">
           Sign in to your account
         </h2>
       </div>
@@ -99,7 +94,7 @@ export const SignIn: React.FC = () => {
           <div>
             <label
               htmlFor="email"
-              className="text-white block text-sm font-medium leading-6 text-gray-900"
+              className="text-white block text-sm font-medium leading-6 "
             >
               Email address
             </label>
@@ -133,7 +128,7 @@ export const SignIn: React.FC = () => {
             <div className="flex items-center justify-between">
               <label
                 htmlFor="password"
-                className="text-white block text-sm font-medium leading-6 text-gray-900"
+                className="text-white block text-sm font-medium leading-6 "
               >
                 Password
               </label>

@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
   faSearch,
@@ -10,7 +9,6 @@ import {
   faUsers,
   faPencilAlt,
   faPuzzlePiece,
-  faUser,
   faPerson,
   faSignOut,
   faMailBulk,

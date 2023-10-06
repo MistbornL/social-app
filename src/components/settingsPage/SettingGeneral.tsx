@@ -1,5 +1,4 @@
 import { yupResolver } from "@hookform/resolvers/yup";
-import React from "react";
 import { useForm } from "react-hook-form";
 import { generalSchema } from "../../schema/generalSchema";
 
@@ -8,8 +7,8 @@ interface FormData {
   email: string;
   password: string;
   bio: string;
-  gender: string;
-  relationship: string;
+  gender: "male" | "female" | "other";
+  relationship: "single" | "married" | "complicated" | "other";
 }
 
 export const SettingGeneral = () => {

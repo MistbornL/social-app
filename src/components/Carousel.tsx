@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import Slider from "react-slick";
 
 export const SimpleSlider = () => {
@@ -20,7 +20,6 @@ export const SimpleSlider = () => {
     dots: false,
     speed: 500,
     slidesToShow: length,
-
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: "0px",

@@ -1,11 +1,10 @@
 import {
   faArrowRight,
-  faArrowRightArrowLeft,
   faCommentDots,
   faHeartCircleBolt,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import { useState } from "react";
 import { PostPreview } from "./ViewPostModal";
 
 export const PostsTab = () => {
@@ -45,7 +44,10 @@ export const PostsTab = () => {
   );
 };
 
-const Post = ({ imageSrc }) => {
+type PostProps = {
+  imageSrc: string;
+};
+const Post: React.FC<PostProps> = ({ imageSrc }) => {
   const [hover, setHover] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   console.log(hover);

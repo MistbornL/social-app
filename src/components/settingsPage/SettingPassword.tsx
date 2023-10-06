@@ -1,4 +1,3 @@
-import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { passwordRecoverySchema } from "../../schema/passwordRecoverySchema";
@@ -6,7 +5,7 @@ import { passwordRecoverySchema } from "../../schema/passwordRecoverySchema";
 interface FormData {
   currentPassword: string;
   newPassword: string;
-  rpeatPassword: string;
+  repeatPassword: string;
 }
 
 const SettingPasswordRecover = () => {
