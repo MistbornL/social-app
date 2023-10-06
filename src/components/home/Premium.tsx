@@ -9,7 +9,7 @@ export const Premium = () => {
         <FontAwesomeIcon icon={faRefresh} color="white" />
       </div>
 
-      <div className="mt-2 flex justify-between">
+      <div className="mt-2 flex justify-between gap-2">
         <div className="relative">
           <div className="absolute bg-slate-800 opacity-50 top-1 right-1 px-2 py-1 rounded-lg ">
             <span className="text-white">18$</span>
