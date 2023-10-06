@@ -5,9 +5,9 @@ import { Pricing } from "./Pricing";
 
 export const Layout = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
   return (
     <>
-      {" "}
       {isOpen && (
         <div className="flex justify-center">
           <div
@@ -16,7 +16,7 @@ export const Layout = () => {
           ></div>
           <Pricing setIsOpen={setIsOpen} />
         </div>
-      )}{" "}
+      )}
       <div className="flex lg:space-x-96">
         <div className="lg:w-72 ">
           <Sidebar setIsOpen={setIsOpen} />
