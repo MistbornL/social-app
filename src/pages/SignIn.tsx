@@ -57,7 +57,7 @@ export const SignIn: React.FC = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("/login", data, {
+      const response = await axios.post("/auth/login", data, {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
         },
