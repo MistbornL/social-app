@@ -35,7 +35,7 @@ const Sidebar: React.FC<SideProps> = ({ setIsOpen }) => {
   }, [token]);
 
   // Track the timer for hiding the profile div
-  let hideProfileTimer: NodeJS.Timeout | null = null;
+  let hideProfileTimer: any = null;
 
   const handleMouseEnter = () => {
     setIsHovered(true);
