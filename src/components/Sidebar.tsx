@@ -93,7 +93,7 @@ const Sidebar: React.FC<SideProps> = ({ setIsOpen }) => {
                         icon={item.icon}
                         color="white"
                       />
-                      <span className="ml-4 text-text hover:text-textHover">
+                      <span className="ml-4 text-gray-300 ">
                         {/* Hide the text when isNotificationOpen is true */}
                         {!isNotificationOpen && item.text}
                       </span>
@@ -108,7 +108,7 @@ const Sidebar: React.FC<SideProps> = ({ setIsOpen }) => {
                         icon={item.icon}
                         color="white"
                       />
-                      <span className="ml-4 text-text hover:text-textHover">
+                      <span className="ml-4 text-gray-300 ">
                         {/* Hide the text when isNotificationOpen is true */}
                         {!isNotificationOpen && item.text}
                       </span>
@@ -121,7 +121,7 @@ const Sidebar: React.FC<SideProps> = ({ setIsOpen }) => {
                           icon={item.icon}
                           color="white"
                         />
-                        <span className="ml-4 text-text hover:text-textHover">
+                        <span className="ml-4 text-gray-300 ">
                           {/* Hide the text when isNotificationOpen is true */}
                           {!isNotificationOpen && item.text}
                         </span>
@@ -228,7 +228,9 @@ const Sidebar: React.FC<SideProps> = ({ setIsOpen }) => {
         </div>
       </div>
 
-      {isNotificationOpen && <Notification />}
+      {isNotificationOpen && (
+        <Notification setIsNotificationOpen={setIsNotificationOpen} />
+      )}
     </div>
   );
 };

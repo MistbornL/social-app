@@ -1,16 +1,24 @@
-import { faCheckCircle, faCog } from "@fortawesome/free-solid-svg-icons";
+import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export const Notification = () => {
+type NotificationProps = {
+  setIsNotificationOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export const Notification: React.FC<NotificationProps> = ({
+  setIsNotificationOpen,
+}) => {
   return (
     <div className="ml-[71px] bg-secondary w-96 py-10 h-screen fixed overflow-y-scroll">
       <div className="flex flex-col">
         {/* header */}
         <div className="flex justify-between items-center px-4 ">
           <h1 className="text-white text-xl">Notification</h1>
-          <div className="flex gap-2">
-            <FontAwesomeIcon icon={faCog} color="white" />
-            <FontAwesomeIcon icon={faCheckCircle} color="white" />
+          <div
+            className="flex cursor-pointer"
+            onClick={() => setIsNotificationOpen(false)}
+          >
+            <FontAwesomeIcon icon={faClose} color="white" size="2xl" />
           </div>
         </div>
 

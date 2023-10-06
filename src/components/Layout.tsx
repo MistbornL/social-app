@@ -18,7 +18,7 @@ export const Layout = () => {
         </div>
       )}
       <div className="flex lg:space-x-96">
-        <div className="lg:w-72 ">
+        <div className="lg:w-64 ">
           <Sidebar setIsOpen={setIsOpen} />
         </div>
 

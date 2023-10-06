@@ -8,7 +8,6 @@ import {
   faShoppingCart,
   faUsers,
   faPencilAlt,
-  faPuzzlePiece,
   faPerson,
   faSignOut,
   faMailBulk,
@@ -32,7 +31,6 @@ export const navItems = [
   { icon: faShoppingCart, text: "Shop", accessor: "/shop" },
   { icon: faUsers, text: "People", accessor: "/people" },
   { icon: faPencilAlt, text: "Create", accessor: "/create" },
-  { icon: faPuzzlePiece, text: "Components", accessor: "/components" },
 ];
 
 export const profileItems = [
