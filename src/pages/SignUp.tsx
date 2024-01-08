@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { registerSchema } from "../schema/registerSchema";
 import { createUser } from "../api/handleRegister";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSignIn } from "react-auth-kit";
 
 interface FormData {
@@ -233,12 +233,12 @@ const SignUp: React.FC = () => {
               </button>
               <p className="text-sm font-light text-white ">
                 Already have an account?{" "}
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="font-medium text-blue-700 underline hover:underline "
                 >
                   Login here
-                </a>
+                </Link>
               </p>
             </form>
           </div>
