@@ -201,7 +201,7 @@ export const SignIn: React.FC = () => {
         </form>
 
         <p className="text-white mt-10 text-center text-sm ">
-          Not a member?
+          Not a member? -{" "}
           <Link
             to="/register"
             className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"

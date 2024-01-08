@@ -232,10 +232,10 @@ const SignUp: React.FC = () => {
                 )}
               </button>
               <p className="text-sm font-light text-white ">
-                Already have an account?{" "}
+                Already have an account? -{" "}
                 <Link
                   to="/"
-                  className="font-medium text-blue-700 underline hover:underline "
+                  className="font-medium text-blue-700  hover:underline "
                 >
                   Login here
                 </Link>
