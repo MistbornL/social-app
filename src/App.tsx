@@ -28,21 +28,21 @@ export const App = () => {
 
   return (
     <Routes>
-      {!isAuthenticated() ? (
+      {/* {!isAuthenticated() ? (
         <>
           <Route path="/" element={<SignIn />} />
           <Route path="/register" element={<SignUp />} />
           <Route path="/recover" element={<ForgotPass />} />
         </>
-      ) : (
-        <>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/settings" element={<Settings />} />
-          </Route>
-        </>
-      )}
+      ) : ( */}
+      <>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/settings" element={<Settings />} />
+        </Route>
+      </>
+      {/* )} */}
 
       {isLoading ? (
         <Fragment>Loading...</Fragment>
